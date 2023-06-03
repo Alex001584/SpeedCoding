@@ -1,6 +1,4 @@
 import random
-import os
-os.system("clear")
 
 Rondas = 3
 Score = [0,0]
@@ -24,6 +22,3 @@ for i in range(Rondas):
         Score[1]+=100
 
 print("\nSCORE\n P1: {}\t P2: {}".format(Score[0],Score[1]))
-
-input()
-os.system("clear")
