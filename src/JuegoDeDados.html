@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body
+        {
+            background-color: black;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    import random <br>
+     <br>
+    Score = [0,0] <br>
+    Rondas = 3 <br>
+    for i in range(Rondas): <br>
+        print("\n\t--- RONDA "+str(i+1)+" ---") <br>
+        Dados = [(random.randint(1, 6), random.randint(1, 6)),(random.randint(1, 6), random.randint(1, 6))] <br>
+        Sumas = [(Dados[0][0]+Dados[0][1]),(Dados[1][0]+Dados[1][1])] <br>
+ <br>
+        print("Tirada del P1: {} y {} = {}".format(Dados[0][0],Dados[0][1],(Dados[0][0]+Dados[0][1]))) <br>
+        print("Tirada del P2: {} y {} = {}".format(Dados[1][0],Dados[1][1],(Dados[1][0]+Dados[1][1]))) <br>
+        Ganador = max((Dados[0][0]+Dados[0][1]), (Dados[1][0]+Dados[1][1])) <br>
+ <br>
+ <br>
+        if Sumas[0] == Sumas[1]: <br>
+            print("Empate con "+str(Sumas[0])) <br>
+        elif Ganador == Sumas[0]: <br>
+            print("El ganador es P1 con "+str(Sumas[0])+" +100") <br>
+            Score[0]+=100 <br>
+        else: <br>
+            print("El ganador es P2 con "+str(Sumas[1])+" +100") <br>
+            Score[1]+=100 <br>
+ <br>
+    print("\nSCORE\n P1: {}\t P2: {}".format(Score[0],Score[1])) <br>
+</body>
+</html>
